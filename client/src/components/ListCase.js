@@ -6,10 +6,11 @@ import EditCase from './EditCase';
 import DeleteCase from './DeleteCase';
 import ProviderTooltip from './ProviderTooltip';
 import { getParsedDate } from './utils.js';
+//const fetch = require('node-fetch'); //Lets us use fetch API server side - not sure if I need it
 
 const ListCase = () => {
 
-
+  const backendURL = 'http://pern-extrev.herokuapp.com';
   const [cases, setCases] = useState([]);
   const [filteredCases, setFilteredCases] = useState([]);
   const [searchTerm, setSearchTerm] = useState();
@@ -39,7 +40,7 @@ const ListCase = () => {
 
   const getCases = async() => {
     try{
-      const response = await fetch("/eligiblecases")
+      const response = await fetch(`${backendURL}/eligiblecases`)
       const jsonData = await response.json()
 
       setCases(jsonData.rows); //Using setCases is the only way to change the state
