@@ -1,0 +1,23 @@
+{
+  "name": "postgres",
+  "version": "1.0.0",
+  "description": "postgres and react and express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "postgres",
+    "react",
+    "express",
+    "node"
+  ],
+  "author": "aaron",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "keycloak-connect": "^15.0.1",
+    "pg": "^8.6.0"
+  }
+}
