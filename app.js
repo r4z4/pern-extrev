@@ -37,6 +37,7 @@ app.use(keycloak.middleware());
 // Middleware ----------
 app.use(cors());
 app.use(express.json()) //This lets us use req.body
+/*
 const keycloak = require('./config/keycloak-config.js').initKeycloak();
 var memoryStore = new session.MemoryStore();                       
 
@@ -54,7 +55,8 @@ app.use(keycloak.middleware({
 	logout: '/logout',
 	admin: '/'
 }));
-/*
+
+
 app.use(function(req, res, next) {
 	res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
 	res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
