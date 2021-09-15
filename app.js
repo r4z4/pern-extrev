@@ -107,7 +107,7 @@ app.put("/eligiblecases", async(req, res) => {
 
 })
 //Route protected with Keycloak??
-app.delete("/eligiblecases", keycloak.protect(), async(req, res) => {
+app.delete("/eligiblecases", async(req, res) => {
 	try {
 		const {caseid} = req.body;
 		const deleteCase = await pool.query(
