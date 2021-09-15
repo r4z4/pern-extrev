@@ -63,7 +63,7 @@ const EditCaseModal = ({ extcase }) => {
           //const id_to_edit = e.target.value;
           const data = {id_to_edit, dateforwarded, caseid, patientid, insurerid, providerid, iroid, denialreason,
             eligibilitynotice, eligiblecorrespondence, insurernotified, decisiondate, irodecision, fileclosed, invoiceamount};
-          const response = await fetch(`http://localhost:3001/eligiblecases`, {
+          const response = await fetch(`/eligiblecases`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)

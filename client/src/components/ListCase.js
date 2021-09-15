@@ -26,7 +26,7 @@ const ListCase = () => {
   const deleteCase = async(caseid) => {
     try {
       const data = {caseid};
-      const response = await fetch(`http://localhost:3001/eligiblecases`, {
+      const response = await fetch(`/eligiblecases`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
@@ -39,7 +39,7 @@ const ListCase = () => {
 
   const getCases = async() => {
     try{
-      const response = await fetch("http://localhost:3001/eligiblecases")
+      const response = await fetch("/eligiblecases")
       const jsonData = await response.json()
 
       setCases(jsonData.rows); //Using setCases is the only way to change the state
@@ -65,7 +65,7 @@ const ListCase = () => {
   const getCase = async() => {
     try{
       let caseid = parseInt(prompt('Please enter Case ID'));
-      const response = await fetch(`http://localhost:3001/eligiblecases/${caseid}`)
+      const response = await fetch(`/eligiblecases/${caseid}`)
       const jsonData = await response.json()
 
       setCases([jsonData]); //Using setCases is the only way to change the state -- Use an ARRAY for map to work

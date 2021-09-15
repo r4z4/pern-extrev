@@ -19,7 +19,7 @@ const AddInitial = () => {
     e.preventDefault();
       try {
         const data = {caseid, dateforwarded, patientid, insurerid, providerid, denialreason};
-        const response = await fetch(`http://localhost:3001/eligiblecases`, {
+        const response = await fetch(`/eligiblecases`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data)
