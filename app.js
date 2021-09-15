@@ -3,7 +3,7 @@ const session = require('express-session');
 
 const express = require('express')
 const cors = require('cors');
-const port = 3001;
+const port = process.env.PORT || 3001;
 const pool = require('./db.js');
 const app = express()
 
@@ -37,6 +37,7 @@ app.use(keycloak.middleware());
 // Middleware ----------
 app.use(cors());
 app.use(express.json()) //This lets us use req.body
+app.use(express.static('build'))
 /*
 const keycloak = require('./config/keycloak-config.js').initKeycloak();
 var memoryStore = new session.MemoryStore();                       
