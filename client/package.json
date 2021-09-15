@@ -18,8 +18,9 @@
   },
   "scripts": {
     "start-js": "react-scripts start",
-    "backend-start": "NODE_ENV=development node C:/Users/aaroz/Node/node-postgres/index.js",
-    "start": "concurrently \"npm-run-all -p backend-start start-js\"",
+    "backend-start-dev": "NODE_ENV=development node C:/Users/aaroz/Node/node-postgres/index.js",
+    "backend-start-prod": "NODE_ENV=production node /app.js",
+    "start": "concurrently \"npm-run-all -p backend-start-prod start-js\"",
     "build": "npm-run-all && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
