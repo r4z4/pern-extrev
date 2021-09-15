@@ -200,7 +200,7 @@ app.get('/eligiblecases/:searchTerm', async (req, res) => {
 	}
 });
 
-app.use( keycloak.middleware( { logout: '/'} ));
+//app.use( keycloak.middleware( { logout: '/'} ));
 
 app.listen(port, () => {
 	console.log(`App running on port ${port}.`)
