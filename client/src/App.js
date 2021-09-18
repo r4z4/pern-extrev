@@ -11,6 +11,7 @@ import ListCase from './components/ListCase';
 import SearchCase from './components/SearchCase';
 import ModalAdd from './components/ModalAdd';
 import AddInitial from './components/AddInitial';
+import AddFull from './components/AddFull';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import LogoutButton from './components/LogoutButton';
@@ -32,10 +33,14 @@ class App extends Component {
         
         <Header className='header' />
         {/*<Login />*/}
+        <div style={{"margin-bottom": "70px", "width": "100%"}}>
         <LogoutButton />
-        <ModalAdd />
+        <div style={{"float": "right"}}>
+        <AddFull style={{"float": "right"}} /><br />
+        <AddInitial style={{"float": "right"}} />
+        </div>
+        </div>
         {/*<SearchCase />*/}
-        <AddInitial />
         <ListCase />
         <Footer />
         </div>
