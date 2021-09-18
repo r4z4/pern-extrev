@@ -36,8 +36,11 @@ app.use(keycloak.middleware());
 
 // Middleware ----------
 app.use(cors());
+//app.options('/eligiblecases', cors())
+//app.use(express.urlencoded({ extended: true }));
 app.use(express.json()) //This lets us use req.body
 app.use(express.static('build'))
+
 /*
 const keycloak = require('./config/keycloak-config.js').initKeycloak();
 var memoryStore = new session.MemoryStore();                       
